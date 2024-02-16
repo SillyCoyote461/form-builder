@@ -1,10 +1,10 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { AppComponent } from './app.component';
+import { LandingComponent } from './pages/landing/landing.component';
 
 const routes: Routes = [
-  { path: '', component: AppComponent, pathMatch: 'full' },
-  { path: 'auth', loadChildren: () => import('./modules/auth/auth.module').then(m => m.AuthModule) },
+  { path: '', component: LandingComponent },
+  { path: 'auth', loadChildren: () => import('../auth/auth.module').then(m => m.AuthModule) },
 ];
 
 @NgModule({
